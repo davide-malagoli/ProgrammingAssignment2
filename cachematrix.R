@@ -1,21 +1,3 @@
-## Put comments here that give an overall description of what your
-## functions do
-
-##ORIGINAL VECTOR FUNCTION
-# makeVector <- function(x = numeric()) {
-#   m <- NULL
-#   set <- function(y) {
-#     x <<- y
-#     m <<- NULL
-#   }
-#   get <- function() x
-#   setmean <- function(mean) m <<- mean
-#   getmean <- function() m
-#   list(set = set, get = get,
-#        setmean = setmean,
-#        getmean = getmean)
-# }
-
 ## MAKECACHEMATRIX
 ## makeCacheMatrix creates a "special matrix", which is really a list containing a function to
 ##
@@ -46,19 +28,6 @@ makeCacheMatrix <- function(x = matrix()) {
   )
   
 }
-
-##ORIGINAL VECTOR FUNCTION
-# cachemean <- function(x, ...) {
-#   m <- x$getmean()
-#   if(!is.null(m)) {
-#     message("getting cached data")
-#     return(m)
-#   }
-#   data <- x$get()
-#   m <- mean(data, ...)
-#   x$setmean(m)
-#   m
-# }
 
 ## CACHESOLVE
 ## cacheSolve calculates the inverse matrix of the "special matrix" 
@@ -105,6 +74,6 @@ cacheSolve <- function(x, ...) {
 ## It should give you something similar
 ##
 ##      [,1]  [,2]
-##[1,]    1   0
-##[2,]    0   1
+##[1,]    1     0
+##[2,]    0     1
 ##
