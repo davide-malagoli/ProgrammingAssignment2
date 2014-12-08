@@ -53,9 +53,9 @@ cacheSolve <- function(x, ...) {
   }
   data <- x$get()
   ## if the matrix is always square, we could use
-  #i <- solve(data)
+  ## i <- solve(data)
   ## but in the general case, supposing data is always invertible,
-  ## i could use the function ginv() from the MASS module
+  ## I could use the function ginv() from the MASS module
   i <- ginv(data)
   x$setinverse(i)
   i
